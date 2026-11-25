@@ -153,8 +153,6 @@ public class AdShieldVpnService extends VpnService {
                     // Drop malformed packet; keep the VPN service alive.
                 }
             }
-        } catch (IOException ignored) {
-            // TUN descriptor was closed or could not be read.
         } finally {
             running = false;
             closeTun();
